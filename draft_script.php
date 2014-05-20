@@ -1,6 +1,6 @@
 <?php
 
-  // Quick and dirty Stat-O-Matic draft selection script
+  // Quick and dirty Strat-O-Matic draft selection script
   // By Dave Schumaker (@davely)
 
   // todo: We also need to reload our initial array so things are ready for a fresh start.
@@ -12,8 +12,6 @@
 
   if (session_status() == PHP_SESSION_NONE) {
     session_start();
-    //$_SESSION['pitcher_array'] = ""; // Use this to store pitchers and remove them from the array as they are drafted.
-    //$_SESSION['batter_array'] = ""; // Use this to store batters and remove them from the array as they are drafted.
   }
 
   //*****************************************************
@@ -21,7 +19,7 @@
   //*****************************************************
 
   function wipe_Rosters() {
-    // Use this to wipe out all settings and start fresh.
+    // Use this to wipe out all variables and start fresh.
     unset($_SESSION['batter_array']);
     unset($_SESSION['pitcher_array']);
     unset($_SESSION['drafted_team']);
@@ -32,6 +30,8 @@
 
   function load_Batters() {
     // DON'T TOUCH THIS! BELOW SHOULD BE FULL ROSTERS FOR BATTERS!!!
+    // Currently filled with some random ballplayers.
+    // todo: import list of players from a CSV file or store in a database.
     $batters = array(
       "Cabrera, M",
       "Kemp, M",
@@ -39,21 +39,19 @@
       "Trout, M",
       "Tulowitzki, T"
     );
-
-    //$_SESSION['batter_array'] = $batters;
     return $batters;
   }
 
   function load_Pitchers() {
     // DON'T TOUCH THIS! BELOW SHOULD BE FULL ROSTERS FOR PITCHERS!!!
+    // Currently filled with some random ballplayers.
+    // todo: import list of players from a CSV file or store in a database.
     $pitchers = array(
       "Greinke, Z",
       "Hammels, C",
       "Kershaw, C",
       "Tanaka, M"
     );
-
-    //$_SESSION['pitcher_array'] = $pitchers;
     return $pitchers;
   }
 
@@ -165,7 +163,7 @@
           if (isset($player_result)) {
             echo "<br/>";
             echo $player_result;
-            echo "<p>Current Team:</p>";
+            echo "<p>Current Team:";
             debug_Show($_SESSION['drafted_team']);
           }
         ?>
