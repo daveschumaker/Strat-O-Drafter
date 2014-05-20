@@ -1,15 +1,15 @@
 # STRAT-O-DRAFTER
-A few friends and I are interested in creating a fantasy baseball league using the Strat-O-Matic board game. Putting together a draft for around 8 teams (x 25 players per team) is a bit time consuming to do by hand.
+A few friends and I were interested in creating a fantasy baseball league using the [Strat-O-Matic](http://www.strat-o-matic.com/) baseball board game. However, putting together a draft for about 8 teams (with 25 players per team) is really time consuming to do by hand.
 
 My ultimate hope is that this nifty little script will allow aspiring Strat-O-Matic commissioners to easily put together both manual and automatic drafts.
 
-## Instructions.
+## Instructions
 
 1. Put this file into any directory with a server running PHP 5.4.0 or greater.
 2. Open up draft_script.php in your favorite browser.
 3. Marvel in the fact that this does basically nothing at the moment (proof of concept).
 
-## Todos: Things to do.
+## Todos: Things to do
 
 These sorts of things are probably buried throughout the script, but I'm listening them here for posterity, hilarity, and general convenience.
 
